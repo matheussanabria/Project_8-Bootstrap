@@ -16,8 +16,8 @@
 
   /*  Own styles */
 div.box-fix{
-    position: relative;
-    top: 56px;
+    /* position: relative;
+    top: 56px; */
 }
 section.bg-top{
     width: 100%;
@@ -31,7 +31,7 @@ section.bg-top{
     z-index: 1;
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     background: rgba(40, 40, 40, 0.4);
@@ -59,6 +59,52 @@ section.bg-top{
     width: 200px;
     border: 0;
     background: #3FA3C5;
+}
+
+section.call{
+    background-color: #3FA3C5;
+    color: white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.1rem;
+    /* position: relative; */
+    /* top: 66px; */
+}
+
+section.call h2{
+    font-size: 1.7em;
+}
+
+section.call h2 i{ 
+    /* margin: 0.5em; */
+}
+
+.text-center{
+    text-align: center;
+
+}
+
+.about{
+    padding: 30px 0;
+    background-color: rgb(225, 225, 225);
+}
+
+.custom-title{
+    position: relative;
+}
+
+.custom-title h2{
+    color: #888;
+    font-size: 1.6em;
+    display: inline;
+}
+
+.custom-title div{
+    background: #3FA3C5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4.5rem;
+    height: 4px;
 }
 
 @media screen and (max-width: 768px){
