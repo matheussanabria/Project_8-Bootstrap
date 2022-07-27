@@ -40,7 +40,35 @@ section.bg-top{
 .fix-zindex{
     position: relative;
     z-index: 2;
+
+}
+
+.text-bg{
     color: white;
+    margin-top: 140px;
+    text-align: justify;
+    display: inline-block;
+    padding: 0 0 140px 0;
+}
+
+.col-md-6 P{
+ padding: 0 30px 0 0;
+}
+
+.col-md-6 .btn{
+    width: 200px;
+    border: 0;
+    background: #3FA3C5;
+}
+
+@media screen and (max-width: 768px){
+    .col-md-6{
+        padding: 0 30px;
+    }
+
+    .col-md-6 p{
+        padding: 0;
+    }
 }
 
 
