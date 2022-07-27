@@ -1,0 +1,46 @@
+.container{
+    max-width: 1280px;
+    padding: 0 2%;
+    margin: 0 auto;
+}
+
+.mx-auto{
+    margin-right: 0!important;
+    margin-left: auto!important;
+}
+
+.navbar-toggler {
+    color: tomato!important;
+    background-color: tomato!important;
+  } 
+
+  /*  Own styles */
+div.box-fix{
+    position: relative;
+    top: 56px;
+}
+section.bg-top{
+    width: 100%;
+    min-height: 600px;
+    background-image: url('/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(40, 40, 40, 0.4);
+}
+
+.fix-zindex{
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+
+
