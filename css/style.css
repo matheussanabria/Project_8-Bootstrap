@@ -1,7 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* starts auxiliary classes */
+* h2, p{
+    margin: 0!important;
+    padding: 0;
+}
+
 .container{
     max-width: 1280px;
-    padding: 0 2%;
+    padding: 0 6%;
     margin: 0 auto;
+}
+
+section{
+    padding: 30px 0;
+}
+
+label{
+    display: inline;
 }
 
 .mx-auto{
@@ -26,6 +46,28 @@
 .text-justify{
     text-align: justify;
 }
+
+.custom-title{
+    position: relative;
+}
+
+.custom-title h2{
+    color: #888;
+    font-size: 1.6em;
+    display: inline;
+}
+
+.custom-title div{
+    background: #3FA3C5;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 4.5rem;
+    height: 4px;
+}
+
+/* ends auxiliary classes */
+
   /*  Own styles */
 div.box-fix{
     /* position: relative;
@@ -63,95 +105,108 @@ section.bg-top{
     padding: 0 0 140px 0;
 }
 
-.col-md-6 P{
- padding: 0 30px 0 0;
+section.bg-top .col-md-6 h2{
+    padding-bottom: 10px; 
 }
-
-.col-md-6 .btn{
+.btn{
     width: 200px;
     border: 0;
     background: #3FA3C5;
+    margin: 0 auto;
+    display: block;
+    color: white;
 }
 
 section.call{
     background-color: #3FA3C5;
     color: white;
-    padding-top: 0.5rem;
-    padding-bottom: 0.1rem;
-    /* position: relative; */
-    /* top: 66px; */
+    padding: 15px 0;
+
 }
 
 section.call h2{
     font-size: 1.7em;
+    display: flex;
+    justify-content: center;
 }
 
-section.call h2 i{ 
-    /* margin: 0.5em; */
-}
 
-
-
-.about{
-    padding: 30px 0;
+section.about{
     background-color: rgb(225, 225, 225);
 }
 
-.custom-title{
-    position: relative;
+section.about .col-md-12{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.custom-title h2{
-    color: #888;
-    font-size: 1.6em;
-    display: inline;
+section.about .col-md-12 > :nth-child(n+2) {
+    text-align: center;
 }
 
-.custom-title div{
-    background: #3FA3C5;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4.5rem;
-    height: 4px;
+section.about button.btn .btn-info {
+    width: 20%;
+    margin: 0 auto;
 }
 
+/**/
 section.differentials{
-    padding: 30px;
     color: #646464;
 }
 
-div.col-md-4{
-    padding: 0 30px;
-}
-section.differentials .row h2{
-    padding: 10px 0;
-    border-bottom: 1px dotted black;
+section.differentials .custom-title{
+    padding-bottom: 20px;
 }
 
+section.differentials .row{
+    gap: 40px;
+    margin: 0 auto;
+}
+
+
+section.differentials .row h2{
+    padding: 10px 0;
+    text-align: center;
+}
+
+section.differentials .col-md-4{
+    box-shadow: 1px 1px 10px 10px #3fa3c514;
+    width: calc(33.33% - 27px);
+    padding: 20px;
+}
 section.differentials p{
     text-align: justify;
 }
 
+/* */
 section.invite{
-    /* padding: 10px 0; */
+    padding: 15px 0; 
     background: #3FA3C5;
+}
+
+section.invite .col-md-6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section.invite h2{
     font-size: 1.6em;
     color: white;
-    margin: 19px 0 15px 0;
 }
-
-.invite form{
-    margin: 15px 0;
+section.invite form{
+    display: flex;
+    align-items: center;
+    gap: 10px;    
 }
 
 section.invite input[type=email]{
     width: calc(100% - 150px);
     height: 40px;   
     padding-left: 15px;
+    border: 0;
+    border-radius: .375rem;
 }
 
 section.invite button{
@@ -166,16 +221,32 @@ section.contact{
     background: rgb(225, 225, 225);
 }
 
-.form-group{
+section.contact .col-md-12:last-of-type{
+    width: 65%;
+    display: block;
+    margin: 0 auto;
+}
+
+section.contact .form-group{
     margin: 10px 0;
 }
 
-footer.footer{
-    padding: 15px 0;
+/**/
+footer.footer:first-of-type{
     background: #333;
     color: white;
+    padding: 20px 0;
 }
 
+footer.footer h2{
+    padding-bottom: 10px;
+}
+
+footer.footer .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 footer ul{
     padding: 0; /* A tag Ul possui margens e espaçamentos pré-definidos que não são zarados pelo bootstrap */
     margin: 0;
@@ -198,20 +269,65 @@ footer a{
     margin: 0 10px;
 }
 
-footer.text-center p{
-    margin: 0;
+footer.footer .copyright{
     background: #444;
     padding: 15px 0;
     color: white;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px){
-    .col-md-6{
-        padding: 0 30px;
+    section.bg-top .text-bg{
+        margin-top: 100px
     }
 
-    .col-md-6 p{
-        padding: 0;
+    section.bg-top .col-md-6{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    section.bg-top .row{
+        gap: 30px;
+    }
+
+    section.differentials .row{
+        flex-direction: column;
+    }
+
+    section.differentials .row .col-md-4{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section.invite .row{
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    section.invite .row .col-md-6{
+        width: 100%;
+    }
+
+    section.contact .col-md-12:last-of-type{
+        width: 100%;
+    }
+
+    footer.footer .row{
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    section.invite form{
+        flex-direction: column;
+    }
+
+    section.invite input[type=email] {
+        width: 100%;
+    }
+
+    section.invite button{
+        margin: 0 auto;
     }
 }
 
