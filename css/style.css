@@ -18,6 +18,7 @@
 
 section{
     padding: 30px 0;
+    
 }
 
 label{
@@ -69,6 +70,7 @@ label{
 /* ends auxiliary classes */
 
   /*  Own styles */
+
 div.box-fix{
     /* position: relative;
     top: 56px; */
@@ -76,7 +78,7 @@ div.box-fix{
 section.bg-top{
     width: 100%;
     min-height: 600px;
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/salao.jpeg');
     background-size: cover;
     background-position: center;
 }
@@ -84,11 +86,11 @@ section.bg-top{
 .overlay{
     z-index: 1;
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 110%;
+    position: absolute;
     left: 0;
     top: 0;
-    background: rgba(40, 40, 40, 0.4);
+    background: rgb(0 0 0 / 35%);
 }
 
 .fix-zindex{
@@ -100,9 +102,9 @@ section.bg-top{
 .text-bg{
     color: white;
     margin-top: 140px;
-    text-align: justify;
+    text-align: left;
     display: inline-block;
-    padding: 0 0 140px 0;
+    padding: 0 0 70px 0;
 }
 
 section.bg-top .col-md-6 h2{
@@ -121,7 +123,8 @@ section.call{
     background-color: #3FA3C5;
     color: white;
     padding: 15px 0;
-
+    position: relative;
+    z-index: 2;
 }
 
 section.call h2{
@@ -131,9 +134,13 @@ section.call h2{
 }
 
 
-section.about{
+section.about {
     background-color: rgb(225, 225, 225);
+    position: relative;
+    z-index: 2;
 }
+
+
 
 section.about .col-md-12{
     gap: 10px;
@@ -151,11 +158,11 @@ section.about button.btn .btn-info {
 }
 
 /**/
-section.differentials{
+section{
     color: #646464;
 }
 
-section.differentials .custom-title{
+section .custom-title{
     padding-bottom: 20px;
 }
 
@@ -165,12 +172,12 @@ section.differentials .row{
 }
 
 
-section.differentials .row h2{
-    padding: 10px 0;
+.professional__speciality,.profissional__name,.service__name,.product__name{
     text-align: center;
+    font-size: 1.5em;
 }
 
-section.differentials .col-md-4{
+section .col-md-4{
     box-shadow: 1px 1px 10px 10px #3fa3c514;
     width: calc(33.33% - 27px);
     padding: 20px;
@@ -179,6 +186,107 @@ section.differentials p{
     text-align: justify;
 }
 
+/**/
+section.professional{
+    
+}
+div.nav-galeria-parent {
+    width: 100%;
+    position: relative;
+    padding: 0 20px;
+}
+
+.nav-galeria{
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: auto;
+    scrollbar-width: none;
+}
+.arrow-left-nav, .arrow-right-nav {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	position: absolute;
+	cursor: pointer;
+	z-index: 10;
+	transform: translateY(-50%);
+}
+
+.arrow-left-nav {
+	border-width: 10px 20px 10px 0;
+	border-color: transparent #3FA3C5 transparent transparent;
+	margin-right: 20px;
+	top: 50%;
+	left: 0px;
+}
+
+.arrow-right-nav {
+	border-width: 10px 0 10px 20px;
+	border-color: transparent transparent transparent #3FA3C5;
+	margin-left: 20px;
+	top: 50%;
+	right: 0;
+}
+
+section.professionals .row,section.services .row, section.products .row {
+    display: flex;
+    flex-wrap: nowrap;
+    -webkit-transition: transform 0.5s;
+    transition: transform 0.5s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    margin: 0 auto;
+}
+.row>*{
+    flex-shrink: inherit!important;
+}   
+section.professionals .row .col-md-4,section.services .row .col-md-4,section.products .row .col-md-4{
+    flex: auto!important;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    margin: 20px;
+    border-radius: 4px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service__price,.product__price{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+
+section .professional__img,
+section .service__img,
+section .product__img{
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+
+section .professional__img img,
+section .service__img img,
+section .product__img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+section .professional__desc{
+    height: 75%;
+}
 /* */
 section.invite{
     padding: 15px 0; 
@@ -257,6 +365,7 @@ footer ul{
 footer a{
     font-size: 1em;
     color: white;
+    text-decoration: none;
 }
 
 .group-btns{
@@ -300,7 +409,7 @@ footer.footer .copyright{
     }
 
     section.invite .row{
-        gap: 10px;
+        gap: 5px;
         flex-direction: column;
     }
 
@@ -314,6 +423,7 @@ footer.footer .copyright{
 
     footer.footer .row{
         gap: 20px;
+        justify-content: space-around;
     }
 }
 
@@ -330,5 +440,3 @@ footer.footer .copyright{
         margin: 0 auto;
     }
 }
-
-
